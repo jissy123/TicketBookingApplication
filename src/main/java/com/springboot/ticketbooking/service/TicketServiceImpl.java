@@ -1,5 +1,7 @@
 package com.springboot.ticketbooking.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.springboot.ticketbooking.entity.Ticket;
@@ -17,8 +19,22 @@ public class TicketServiceImpl implements TicketService {
 		
 		
 	}
-	
-	
+
+	@Override
+	public Iterable<Ticket> getTickets() {
+		
+	  	return ticketRepo.findAll();
+	}
+
+	@Override
+	public Ticket getTicket(Integer ticketId) {
+		
+		return ticketRepo.findById(ticketId).orElse(new Ticket());
+				
+		
+		
+	}
 	
 
+	
 }

@@ -6,6 +6,10 @@ public interface TicketService {
 
 public Ticket createTicket(Ticket ticket);
 
-public Iterable<Ticket> 
+public Iterable<Ticket> getTickets();
+
+Ticket getTicket(Integer ticketId);
+
+
 	
 }
