@@ -34,6 +34,20 @@ public class TicketServiceImpl implements TicketService {
 		
 		
 	}
+
+	@Override
+	public void deleteTicket(Integer ticketId) {
+		
+		ticketRepo.deleteById(ticketId);
+	}
+
+	@Override
+	public Ticket updateTicket(Integer ticketId, String newEmail) {
+		Ticket dbTicket =getTicket(ticketId);
+		dbTicket.setEmailAddress(newEmail);
+		
+		return ticketRepo.save(dbTicket);
+	}
 	
 
 	
