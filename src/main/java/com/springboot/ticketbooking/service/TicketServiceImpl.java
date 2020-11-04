@@ -3,10 +3,12 @@ package com.springboot.ticketbooking.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.springboot.ticketbooking.entity.Ticket;
 import com.springboot.ticketbooking.repository.TicketRepo;
 
+@Service
 public class TicketServiceImpl implements TicketService {
 	
 	@Autowired
